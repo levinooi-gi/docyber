@@ -1,42 +1,44 @@
 {{ define "main" }}
 
-<h1>About</h1>
+<h1>About Us</h1>
 
 <p>
-Console is a minimal, responsive and light theme for Hugo inspired by Linux console.  <a href="about/">(more)</a>
+DoCyber is a Singapore Cybersecurity Service Delivery Specialist.
 </p>
 <br/>
 
-<h1>Latest posts</h1>
+<h1>Products We Do</h1>
 
 <div class="posts-list">
-{{ with .Site.GetPage "/posts" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+
         <div class="post">
             <p>
-                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
+                <div>IBM QRadar</div>
+                <p>IBM QRadar Security Information and Event Management (SIEM) helps security teams accurately detect and prioritize threats across the enterprise, and it provides intelligent insights that enable teams to respond quickly to reduce the impact of incidents. By consolidating log events and network flow data from thousands of devices, endpoints and applications distributed throughout your network, QRadar correlates all this different information and aggregates related events into single alerts to accelerates incident analysis and remediation.</p>
             </p>
         </div>    
-    {{ end }}
-{{ end }}
-</div>
 
-<h1>Latest photos</h1>
+        <div class="post">
+            <p>
+                <div>IBM Guardium</div>
+                <p>IBM Guardium prevents leaks from databases, data warehouses and Big Data environments such as Hadoop, ensures the integrity of information and automates compliance controls across heterogeneous environments.</p>
+            </p>
+        </div> 
 
-<div class="image-grid">
-{{ with .Site.GetPage "/photos" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc")}}
-        <a href="{{ .Permalink }}" title="{{ .Title }}">
-        {{ $image := .Page.Resources.GetMatch .Params.image }}
-        {{ with $image }}
-            {{ $thumb := .Resize "400x" }}
-            <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
-        {{end}}
-        </a>
-    {{ end }}
-{{ end }}
+        <div class="post">
+            <p>
+                <div>CyberX: IoT & ICS Security</div>
+                <p>Accelerate digitalization with the simplest and most robust solution for reducing risk from IoT/OT network threats and unmanaged devices.</p>
+            </p>
+        </div> 
+
+        <div class="post">
+            <p>
+                <div>GreyCortex</div>
+                <p>An advanced network traffic analysis, threat detection for enterprise, government, and critical infrastructure.</p>
+            </p>
+        </div> 
+
 </div>
 
 {{ end }}
