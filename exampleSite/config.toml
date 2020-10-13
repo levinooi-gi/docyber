@@ -1,4 +1,4 @@
-baseurl = "https://example.com/"
+baseurl = "https://docyber.net/"
 title = "DoCyber"
 theme = "hugo-theme-console"
 languageCode = "en-us"
