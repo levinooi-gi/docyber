@@ -1,5 +1,5 @@
 baseurl = "https://example.com/"
-title = "console-demo"
+title = "DoCyber"
 theme = "hugo-theme-console"
 languageCode = "en-us"
 
